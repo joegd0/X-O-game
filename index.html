@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X O | by Y.loai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="startModal" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:1000;">
+  <form id="gameForm" style="background:#f25;padding:30px;border-radius:10px;min-width:300px;">
+    <h2>Choose Game Mode</h2>
+    <label>
+      <input type="radio" name="mode" value="ai" checked> Play vs AI
+    </label><br>
+    <label>
+      <input type="radio" name="mode" value="multi"> Multiplayer
+    </label><br><br>
+    <div id="playerNames" style="display:none;">
+      <input type="text" id="player1" placeholder="Player 1 Name(X)" required><br><br>
+      <input type="text" id="player2" placeholder="Player 2 Name(O)" required><br><br>
+    </div>
+    <button type="submit" style="border-radius:30px ;">Start Game</button>
+  </form>
+</div>
+    <div class="game" id="board">
+
+        <div class="title"><span>X O</span> Game <p>by Y.Loai</p></div>
+        <div class="board">
+        <div class="square" id="item1" onclick="game(this.id)"></div>
+        <div class="square" id="item2" onclick="game(this.id)"></div>
+        <div class="square" id="item3" onclick="game(this.id)"></div>
+
+        <div class="square" id="item4" onclick="game(this.id)"></div>
+        <div class="square" id="item5" onclick="game(this.id)"></div>
+        <div class="square" id="item6" onclick="game(this.id)"></div>
+
+        <div class="square" id="item7" onclick="game(this.id)"></div>
+        <div class="square" id="item8" onclick="game(this.id)"></div>
+        <div class="square" id="item9" onclick="game(this.id)"></div>
+    </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
