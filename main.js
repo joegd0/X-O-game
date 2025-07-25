@@ -2,6 +2,15 @@ let title = document.querySelector('.title')
 let turn = 'x';
 let squares = [];
 let gameOver = false;
+let item1 = document.getElementById('item1');
+let item2 = document.getElementById('item2');
+let item3 = document.getElementById('item3');
+let item4 = document.getElementById('item4');
+let item5 = document.getElementById('item5');
+let item6 = document.getElementById('item6');
+let item7 = document.getElementById('item7');
+let item8 = document.getElementById('item8');
+let item9 = document.getElementById('item9');
 document.querySelectorAll('input[name="mode"]').forEach(radio => {
     radio.addEventListener('change', function() {
         const isMulti = this.value === 'multi';
@@ -20,6 +29,251 @@ window.addEventListener('DOMContentLoaded', function() {
 function aiMove() {
     if (gameOver) return; // Find all empty squares
     let empty = [];
+        if(item1.innerHTML == item2.innerHTML && item2.innerHTML == 'O' && item3.innerHTML == ''){
+        item3.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item4.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item6.innerHTML == ''){
+        item6.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item7.innerHTML == item8.innerHTML && item8.innerHTML == 'O' && item9.innerHTML == ''){
+        item9.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item2.innerHTML && item2.innerHTML == 'O' && item1.innerHTML == ''){
+        item1.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item6.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item4.innerHTML == ''){
+        item4.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item9.innerHTML == item8.innerHTML && item8.innerHTML == 'O' && item7.innerHTML == ''){
+        item7.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item3.innerHTML && item3.innerHTML == 'O' && item2.innerHTML == ''){
+        item2.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item4.innerHTML == item6.innerHTML && item6.innerHTML == 'O' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item7.innerHTML == item9.innerHTML && item9.innerHTML == 'O' && item8.innerHTML == ''){
+        item8.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item4.innerHTML && item4.innerHTML == 'O' && item7.innerHTML == ''){
+        item7.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item2.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item8.innerHTML == ''){
+        item8.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item6.innerHTML && item6.innerHTML == 'O' && item9.innerHTML == ''){
+        item9.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item4.innerHTML == item7.innerHTML && item7.innerHTML == 'O' && item1.innerHTML == ''){
+        item1.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item8.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item2.innerHTML == ''){
+        item2.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item6.innerHTML == item9.innerHTML && item9.innerHTML == 'O' && item3.innerHTML == ''){
+        item3.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item7.innerHTML && item7.innerHTML == 'O' && item4.innerHTML == ''){
+        item4.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item2.innerHTML == item8.innerHTML && item8.innerHTML == 'O' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item9.innerHTML && item9.innerHTML == 'O' && item6.innerHTML == ''){
+        item6.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item9.innerHTML == ''){
+        item9.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item7.innerHTML == ''){
+        item7.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item9.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item1.innerHTML == ''){
+        item1.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item7.innerHTML == item5.innerHTML && item5.innerHTML == 'O' && item3.innerHTML == ''){
+        item3.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item9.innerHTML&& item9.innerHTML == 'O' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item7.innerHTML && item7.innerHTML == 'O' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }
+
+
+    else if(item1.innerHTML == item2.innerHTML && item2.innerHTML != '' && item3.innerHTML == ''){
+        item3.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item4.innerHTML == item5.innerHTML && item5.innerHTML != '' && item6.innerHTML == ''){
+        item6.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item7.innerHTML == item8.innerHTML && item8.innerHTML != '' && item9.innerHTML == ''){
+        item9.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item2.innerHTML && item2.innerHTML != '' && item1.innerHTML == ''){
+        item1.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item6.innerHTML == item5.innerHTML && item5.innerHTML != '' && item4.innerHTML == ''){
+        item4.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item9.innerHTML == item8.innerHTML && item8.innerHTML != '' && item7.innerHTML == ''){
+        item7.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item3.innerHTML && item3.innerHTML != '' && item2.innerHTML == ''){
+        item2.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item4.innerHTML == item6.innerHTML && item6.innerHTML != '' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item7.innerHTML == item9.innerHTML && item9.innerHTML != '' && item8.innerHTML == ''){
+        item8.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item4.innerHTML && item4.innerHTML != '' && item7.innerHTML == ''){
+        item7.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item2.innerHTML == item5.innerHTML && item5.innerHTML != '' && item8.innerHTML == ''){
+        item8.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item6.innerHTML && item6.innerHTML != '' && item9.innerHTML == ''){
+        item9.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item4.innerHTML == item7.innerHTML && item7.innerHTML != '' && item1.innerHTML == ''){
+        item1.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item8.innerHTML == item5.innerHTML && item5.innerHTML != '' && item2.innerHTML == ''){
+        item2.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item6.innerHTML == item9.innerHTML && item9.innerHTML != '' && item3.innerHTML == ''){
+        item3.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item7.innerHTML && item7.innerHTML != '' && item4.innerHTML == ''){
+        item4.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item2.innerHTML == item8.innerHTML && item8.innerHTML != '' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item9.innerHTML && item9.innerHTML != '' && item6.innerHTML == ''){
+        item6.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item5.innerHTML && item5.innerHTML != '' && item9.innerHTML == ''){
+        item9.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item5.innerHTML && item5.innerHTML != '' && item7.innerHTML == ''){
+        item7.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item9.innerHTML == item5.innerHTML && item5.innerHTML != '' && item1.innerHTML == ''){
+        item1.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item7.innerHTML == item5.innerHTML && item5.innerHTML != '' && item3.innerHTML == ''){
+        item3.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item1.innerHTML == item9.innerHTML && item9.innerHTML != '' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }else if(item3.innerHTML == item7.innerHTML && item7.innerHTML != '' && item5.innerHTML == ''){
+        item5.innerHTML = 'O';
+        turn = 'x';
+        title.innerHTML = 'X Turn';
+        winner();
+    }
+    else{
     for (let i = 1; i < 10; i++) {
         let el = document.getElementById('item' + i);
         if (el.innerHTML === '') empty.push(i);
@@ -31,7 +285,7 @@ function aiMove() {
         turn = 'x';
         title.innerHTML = 'X Turn';
         winner();
-    }
+    }}
 }
 function winner(){
     for(let i = 1; i<10 ; i++){
